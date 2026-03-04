@@ -1,0 +1,368 @@
+/* ═══════════════════════════════════════
+   ESTILOS PERSONALIZADOS — Tema Oscuro Minimalista
+   Sitio Web Informativo: Programación del Lado del Servidor
+   ═══════════════════════════════════════ */
+
+/* --- Variables de colores (Minimalista Monocromático) --- */
+:root {
+    --color-fondo: #050505;
+    /* Negro profundo */
+    --color-superficie: #0e0e0e;
+    /* Gris muy oscuro para secciones alternas */
+    --color-tarjeta: #141414;
+    /* Gris oscuro para elementos */
+    --color-acento: #ffffff;
+    /* Blanco puro para destacar */
+    --color-texto: #cccccc;
+    /* Gris claro para lectura suave */
+    --color-texto-suave: #888888;
+    /* Gris medio para textos secundarios */
+    --color-borde: #262626;
+    /* Bordes sutiles */
+}
+
+/* --- Override de colores Bootstrap para Minimalismo --- */
+.text-primary,
+.text-success,
+.text-warning,
+.text-info,
+.text-danger,
+.text-secondary {
+    color: var(--color-texto) !important;
+}
+
+.bg-primary,
+.bg-success,
+.bg-warning,
+.bg-info,
+.bg-danger,
+.bg-secondary {
+    background-color: var(--color-tarjeta) !important;
+    color: var(--color-texto) !important;
+    border: 1px solid var(--color-borde) !important;
+}
+
+.badge {
+    font-weight: 400;
+    padding: 6px 12px;
+    border-radius: 2px !important;
+}
+
+/* --- Estilos generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-acento);
+    font-weight: 300;
+}
+
+/* --- Barra de navegación --- */
+.barra-navegacion {
+    background: rgba(5, 5, 5, 0.95);
+    border-bottom: 1px solid var(--color-borde);
+    padding: 15px 0;
+}
+
+.marca {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-acento) !important;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-texto-suave) !important;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    text-transform: lowercase;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-acento) !important;
+}
+
+/* --- Sección Hero --- */
+.seccion-hero {
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+    padding-top: 80px;
+    background-image: none !important;
+    /* Quitar cualquier gradiente */
+}
+
+.etiqueta-hero {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border: 1px solid var(--color-borde);
+    background-color: transparent !important;
+    text-transform: uppercase;
+}
+
+.titulo-hero {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1.5px;
+}
+
+.texto-acento {
+    color: var(--color-acento);
+    font-weight: 400;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+}
+
+.subtitulo-hero {
+    font-size: 1.05rem;
+    color: var(--color-texto-suave);
+    max-width: 500px;
+}
+
+/* --- Botones --- */
+.btn {
+    border-radius: 2px !important;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+
+.btn-primary,
+.boton-hero,
+.boton-enviar {
+    background-color: var(--color-acento) !important;
+    color: var(--color-fondo) !important;
+    border: none !important;
+    padding: 12px 28px;
+}
+
+.btn-primary:hover,
+.boton-hero:hover,
+.boton-enviar:hover {
+    background-color: var(--color-texto) !important;
+    color: var(--color-fondo) !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* --- Secciones de temas --- */
+.seccion-tema {
+    padding: 100px 0;
+}
+
+.seccion-alterna {
+    background-color: var(--color-superficie);
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.titulo-seccion {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    margin-bottom: 3rem;
+}
+
+.titulo-seccion i {
+    color: var(--color-texto-suave) !important;
+    margin-right: 12px;
+}
+
+.subtitulo-tema {
+    color: var(--color-texto-suave);
+    max-width: 600px;
+    font-size: 1rem;
+}
+
+/* --- Imágenes de temas --- */
+.imagen-tema {
+    border: 1px solid var(--color-borde);
+    border-radius: 2px !important;
+}
+
+/* --- Tarjetas (Cards) --- */
+.tarjeta-tema {
+    background-color: transparent !important;
+    border: 1px solid var(--color-borde);
+    border-radius: 2px;
+}
+
+.tarjeta-tema .card-body {
+    padding: 2rem;
+}
+
+.tarjeta-tema .card-title {
+    font-weight: 400;
+}
+
+.card-img-top {
+    border-radius: 2px 2px 0 0;
+}
+
+/* --- Accordion minimalista --- */
+.accordion-item {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 1px solid var(--color-borde);
+    border-radius: 0 !important;
+}
+
+.accordion-button {
+    background-color: transparent !important;
+    color: var(--color-acento) !important;
+    font-weight: 400;
+    padding: 24px 0;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--color-acento) !important;
+}
+
+.accordion-button::after {
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+.accordion-body {
+    color: var(--color-texto-suave);
+    padding: 0 0 24px 0;
+}
+
+/* --- Tabla --- */
+.table {
+    border-color: var(--color-borde) !important;
+    color: var(--color-texto) !important;
+    margin-bottom: 0;
+}
+
+.table td,
+.table th {
+    background-color: transparent !important;
+    border-color: var(--color-borde);
+    padding: 16px;
+    font-weight: 400;
+}
+
+/* --- Iconos Nube --- */
+.icono-nube {
+    font-size: 2rem;
+    color: var(--color-texto-suave) !important;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Mapa & Video --- */
+.contenedor-mapa,
+.contenedor-video {
+    border: 1px solid var(--color-borde);
+    border-radius: 2px !important;
+    padding: 4px;
+    /* Marco sutil */
+}
+
+/* --- Formulario --- */
+.form-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-texto-suave);
+    margin-bottom: 4px;
+}
+
+.form-control,
+.form-select {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid var(--color-borde) !important;
+    border-radius: 0 !important;
+    color: var(--color-acento) !important;
+    padding: 10px 0;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-texto) !important;
+    box-shadow: none !important;
+}
+
+.form-control::placeholder {
+    color: var(--color-borde);
+}
+
+/* --- Modal --- */
+.modal-content {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 2px;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--color-borde);
+}
+
+.modal-title {
+    font-weight: 300;
+}
+
+/* --- Pie de página --- */
+.pie-pagina {
+    background-color: var(--color-fondo);
+    border-top: 1px solid var(--color-borde);
+    padding: 40px 0;
+}
+
+.pie-pagina p {
+    font-size: 0.85rem;
+}
+
+/* --- Animaciones (Simples) --- */
+.seccion-tema {
+    animation: fade 1.5s ease-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-fondo);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-borde);
+}

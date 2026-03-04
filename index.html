@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web informativo sobre Programación del Lado del Servidor - Desarrollo Web">
+    <title>Programación del Lado del Servidor | Desarrollo Web</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- BARRA DE NAVEGACIÓN (Componente Bootstrap #1) -->
+    <!-- ═══════════════════════════════════════ -->
+    <nav class="navbar navbar-expand-lg fixed-top barra-navegacion" id="barraNavegacion">
+        <div class="container">
+            <a class="navbar-brand marca" href="#inicio">
+                <i class="bi bi-code-slash"></i> DevServer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavegacion">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#webapis">Web APIs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#microservicios">Microservicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#desarrollo-api">Desarrollo API</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contenedores">Contenedores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nube">Nube</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN HERO / INICIO -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="inicio" class="seccion-hero d-flex align-items-center">
+        <div class="container text-center">
+            <span class="badge rounded-pill bg-primary mb-3 etiqueta-hero">
+                <i class="bi bi-mortarboard"></i> Desarrollo Web — Unidad I y II
+            </span>
+            <h1 class="titulo-hero">Programación del Lado<br>del <span class="texto-acento">Servidor</span></h1>
+            <p class="subtitulo-hero mx-auto">
+                Explora las tecnologías más importantes del backend moderno: Web APIs, Microservicios,
+                Contenedores y computación en la Nube.
+            </p>
+            <a href="#webapis" class="btn btn-primary btn-lg mt-3 boton-hero">
+                Explorar temas <i class="bi bi-arrow-down-circle ms-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN 1: TECNOLOGÍAS DE WEB APIs -->
+    <!-- Componente Bootstrap #2: Accordion -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="webapis" class="seccion-tema py-5">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-5">
+                <i class="bi bi-hdd-network"></i> Tecnologías de Web APIs
+            </h2>
+            <div class="row align-items-center g-4">
+                <!-- Imagen -->
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop"
+                        alt="Código de programación" class="img-fluid rounded-3 imagen-tema">
+                </div>
+                <!-- Acordeón con subtemas -->
+                <div class="col-lg-7">
+                    <p class="mb-4">
+                        Una <strong>API (Interfaz de Programación de Aplicaciones)</strong> permite que dos
+                        aplicaciones se comuniquen entre sí. Las Web APIs son el puente para el intercambio de
+                        datos a través de internet.
+                    </p>
+                    <div class="accordion" id="acordeonAPIs">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#rest">
+                                    <i class="bi bi-arrow-left-right me-2"></i> REST (Representational State Transfer)
+                                </button>
+                            </h3>
+                            <div id="rest" class="accordion-collapse collapse show" data-bs-parent="#acordeonAPIs">
+                                <div class="accordion-body">
+                                    Es el estilo arquitectónico más popular. Utiliza los métodos HTTP (GET, POST, PUT,
+                                    DELETE)
+                                    para operar sobre recursos identificados por URLs. Es simple, escalable y sin estado
+                                    (stateless).
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#soap">
+                                    <i class="bi bi-envelope me-2"></i> SOAP (Simple Object Access Protocol)
+                                </button>
+                            </h3>
+                            <div id="soap" class="accordion-collapse collapse" data-bs-parent="#acordeonAPIs">
+                                <div class="accordion-body">
+                                    Protocolo basado en XML para intercambiar información. Se usa en sistemas
+                                    empresariales
+                                    que requieren alta seguridad y transacciones complejas, como servicios bancarios.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#graphql">
+                                    <i class="bi bi-diagram-3 me-2"></i> GraphQL
+                                </button>
+                            </h3>
+                            <div id="graphql" class="accordion-collapse collapse" data-bs-parent="#acordeonAPIs">
+                                <div class="accordion-body">
+                                    Lenguaje de consulta creado por Facebook. Permite al cliente solicitar exactamente
+                                    los datos
+                                    que necesita, evitando problemas de over-fetching y under-fetching comunes en REST.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#websockets">
+                                    <i class="bi bi-lightning me-2"></i> WebSockets
+                                </button>
+                            </h3>
+                            <div id="websockets" class="accordion-collapse collapse" data-bs-parent="#acordeonAPIs">
+                                <div class="accordion-body">
+                                    Protocolo de comunicación bidireccional en tiempo real. Ideal para chats, juegos en
+                                    línea
+                                    y dashboards que necesitan actualizaciones instantáneas sin necesidad de polling.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN 2: MICROSERVICIOS -->
+    <!-- Componente Bootstrap #3: Cards -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="microservicios" class="seccion-tema seccion-alterna py-5">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-3">
+                <i class="bi bi-boxes"></i> Microservicios
+            </h2>
+            <p class="text-center subtitulo-tema mx-auto mb-5">
+                Arquitectura que divide una aplicación en servicios pequeños, independientes y desplegables
+                de forma autónoma. Cada servicio cumple una función específica.
+            </p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-tema">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop"
+                            class="card-img-top" alt="Centro de datos">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-question-circle text-primary"></i> ¿Qué son?</h5>
+                            <p class="card-text">
+                                Son servicios pequeños que se ejecutan de forma independiente y se comunican
+                                mediante APIs. A diferencia de los monolitos, cada servicio se puede actualizar
+                                y escalar sin afectar a los demás.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-tema">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop"
+                            class="card-img-top" alt="Red global">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-check-circle text-success"></i> Ventajas</h5>
+                            <p class="card-text">
+                                <strong>Escalabilidad:</strong> escalar solo lo necesario.<br>
+                                <strong>Independencia:</strong> equipos trabajan en paralelo.<br>
+                                <strong>Resiliencia:</strong> un fallo no afecta el sistema completo.<br>
+                                <strong>Flexibilidad tecnológica:</strong> cada servicio puede usar su propio stack.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-tema">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop"
+                            class="card-img-top" alt="Desarrollo de software">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Herramientas</h5>
+                            <p class="card-text">
+                                <span class="badge bg-secondary">Docker</span>
+                                <span class="badge bg-secondary">Kubernetes</span>
+                                <span class="badge bg-secondary">API Gateway</span>
+                                <span class="badge bg-secondary">RabbitMQ</span>
+                                <span class="badge bg-secondary">gRPC</span>
+                                <span class="badge bg-secondary">Consul</span>
+                                <br><br>
+                                Estas herramientas facilitan la comunicación, el despliegue y la
+                                orquestación de microservicios en producción.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN 3: DESARROLLO DE UNA WEB API -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="desarrollo-api" class="seccion-tema py-5">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-5">
+                <i class="bi bi-braces"></i> Desarrollo de una Web API
+            </h2>
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <p>
+                        Desarrollar una Web API implica crear endpoints que reciben peticiones HTTP y devuelven
+                        datos en formatos como <strong>JSON</strong> o <strong>XML</strong>. Los frameworks modernos
+                        simplifican este proceso al proporcionar herramientas para rutas, middleware y manejo de
+                        errores.
+                    </p>
+                    <h5 class="mt-4 mb-3">Métodos HTTP principales:</h5>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-bordered tabla-metodos">
+                            <thead>
+                                <tr>
+                                    <th>Método</th>
+                                    <th>Acción</th>
+                                    <th>Ejemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge bg-success">GET</span></td>
+                                    <td>Obtener datos</td>
+                                    <td>/api/usuarios</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge bg-primary">POST</span></td>
+                                    <td>Crear recurso</td>
+                                    <td>/api/usuarios</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge bg-warning text-dark">PUT</span></td>
+                                    <td>Actualizar recurso</td>
+                                    <td>/api/usuarios/1</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge bg-danger">DELETE</span></td>
+                                    <td>Eliminar recurso</td>
+                                    <td>/api/usuarios/1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5 class="mt-4 mb-3">Frameworks populares:</h5>
+                    <p>
+                        <span class="badge bg-success">Express.js</span>
+                        <span class="badge bg-info">Flask</span>
+                        <span class="badge bg-danger">Spring Boot</span>
+                        <span class="badge bg-warning text-dark">Django REST</span>
+                        <span class="badge bg-primary">ASP.NET</span>
+                    </p>
+                </div>
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&h=400&fit=crop"
+                        alt="Desarrollo de API" class="img-fluid rounded-3 imagen-tema">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN 4: MANEJO DE CONTENEDORES -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="contenedores" class="seccion-tema seccion-alterna py-5">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-5">
+                <i class="bi bi-box-seam"></i> Manejo de Contenedores
+            </h2>
+            <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600&h=400&fit=crop"
+                        alt="Contenedores Docker" class="img-fluid rounded-3 imagen-tema">
+                </div>
+                <div class="col-lg-7">
+                    <p>
+                        Los <strong>contenedores</strong> son unidades de software que empaquetan el código junto con
+                        todas sus dependencias, garantizando que la aplicación funcione de forma idéntica en cualquier
+                        entorno, ya sea desarrollo, pruebas o producción.
+                    </p>
+                    <h5 class="mt-4 mb-3"><i class="bi bi-box text-info"></i> Docker</h5>
+                    <p>
+                        Es la plataforma líder para crear y ejecutar contenedores. Utiliza un
+                        <strong>Dockerfile</strong>
+                        para definir la imagen y <strong>Docker Compose</strong> para orquestar múltiples contenedores.
+                    </p>
+                    <h5 class="mt-3 mb-3"><i class="bi bi-gear text-info"></i> Kubernetes (K8s)</h5>
+                    <p>
+                        Sistema de orquestación que automatiza el despliegue, escalado y gestión de contenedores
+                        en clústeres de servidores. Es el estándar de la industria para aplicaciones a gran escala.
+                    </p>
+                    <h5 class="mt-3 mb-3"><i class="bi bi-check2-all text-info"></i> Beneficios clave</h5>
+                    <ul>
+                        <li>Portabilidad: funciona igual en cualquier máquina</li>
+                        <li>Aislamiento: cada contenedor es independiente</li>
+                        <li>Eficiencia: más ligeros que las máquinas virtuales</li>
+                        <li>Escalabilidad: fácil de replicar servicios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN 5: DESARROLLO PARA LA NUBE -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="nube" class="seccion-tema py-5">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-3">
+                <i class="bi bi-cloud"></i> Desarrollo de Aplicaciones para la Nube
+            </h2>
+            <p class="text-center subtitulo-tema mx-auto mb-5">
+                La computación en la nube permite acceder a recursos de cómputo, almacenamiento y servicios
+                a través de internet, sin necesidad de infraestructura propia.
+            </p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-tema text-center">
+                        <div class="card-body">
+                            <i class="bi bi-hdd-rack icono-nube text-primary"></i>
+                            <h5 class="card-title mt-3">IaaS</h5>
+                            <p class="card-text">
+                                <strong>Infraestructura como Servicio.</strong> Provee servidores virtuales,
+                                redes y almacenamiento. El usuario gestiona el sistema operativo y las aplicaciones.
+                            </p>
+                            <span class="badge bg-primary">AWS EC2</span>
+                            <span class="badge bg-primary">Azure VMs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-tema text-center">
+                        <div class="card-body">
+                            <i class="bi bi-layers icono-nube text-success"></i>
+                            <h5 class="card-title mt-3">PaaS</h5>
+                            <p class="card-text">
+                                <strong>Plataforma como Servicio.</strong> Ofrece un entorno listo para desarrollar
+                                y desplegar apps sin preocuparse por la infraestructura subyacente.
+                            </p>
+                            <span class="badge bg-success">Heroku</span>
+                            <span class="badge bg-success">Google App Engine</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-tema text-center">
+                        <div class="card-body">
+                            <i class="bi bi-globe icono-nube text-warning"></i>
+                            <h5 class="card-title mt-3">SaaS</h5>
+                            <p class="card-text">
+                                <strong>Software como Servicio.</strong> Aplicaciones completas accesibles desde el
+                                navegador. El proveedor gestiona toda la infraestructura y mantenimiento.
+                            </p>
+                            <span class="badge bg-warning text-dark">Gmail</span>
+                            <span class="badge bg-warning text-dark">Slack</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Imagen complementaria -->
+            <div class="text-center mt-5">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=350&fit=crop"
+                    alt="Infraestructura en la nube" class="img-fluid rounded-3 imagen-tema"
+                    style="max-height: 350px; object-fit: cover; width: 100%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN: MATERIAL EXTRA / RECURSOS -->
+    <!-- Componente Bootstrap Extra: List Group y Badges -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="recursos" class="seccion-tema seccion-alterna py-5">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-5">
+                <i class="bi bi-journal-code"></i> Material Extra: Recursos Útiles
+            </h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="tarjeta-tema h-100" style="border-radius: 2px;">
+                        <div class="card-body">
+                            <h5 class="card-title text-acento"><i class="bi bi-server me-2"></i> Herramientas API</h5>
+                            <p class="text-secondary small mb-3">Software indispensable para desarrollo de backend.</p>
+                            <ul class="list-group list-group-flush bg-transparent">
+                                <li class="list-group-item bg-transparent text-secondary border-secondary px-0">
+                                    <strong>Postman:</strong> Para probar y documentar endpoints REST.
+                                </li>
+                                <li class="list-group-item bg-transparent text-secondary border-secondary px-0">
+                                    <strong>Swagger:</strong> Diseño y documentación de APIs (OpenAPI).
+                                </li>
+                                <li
+                                    class="list-group-item bg-transparent text-secondary border-secondary px-0 border-bottom-0">
+                                    <strong>Insomnia:</strong> Cliente HTTP minimalista y rápido.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="tarjeta-tema h-100" style="border-radius: 2px;">
+                        <div class="card-body">
+                            <h5 class="card-title text-acento"><i class="bi bi-book me-2"></i> Documentación Oficial
+                            </h5>
+                            <p class="text-secondary small mb-3">Las mejores fuentes para aprender sintaxis y guías.</p>
+                            <ul class="list-group list-group-flush bg-transparent">
+                                <li class="list-group-item bg-transparent text-secondary border-secondary px-0">
+                                    <strong>MDN Web Docs:</strong> La biblia del desarrollo web y HTTP.
+                                </li>
+                                <li class="list-group-item bg-transparent text-secondary border-secondary px-0">
+                                    <strong>Docker Docs:</strong> Guías oficiales de contenedores.
+                                </li>
+                                <li
+                                    class="list-group-item bg-transparent text-secondary border-secondary px-0 border-bottom-0">
+                                    <strong>OWASP:</strong> Estándares de seguridad para aplicaciones.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN: DATOS CURIOSOS -->
+    <!-- Componente Bootstrap #4: Carousel de Texto -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="seccion-tema py-5 pt-0">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-4">
+                <i class="bi bi-lightbulb"></i> ¿Sabías que...?
+            </h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Carrusel de puro texto, sin imágenes -->
+                    <div id="carruselTexto" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators" style="bottom: -20px;">
+                            <button type="button" data-bs-target="#carruselTexto" data-bs-slide-to="0" class="active"
+                                aria-current="true"></button>
+                            <button type="button" data-bs-target="#carruselTexto" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carruselTexto" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner text-center p-5 tarjeta-tema" style="border-radius: 2px;">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active" data-bs-interval="4000">
+                                <i class="bi bi-hdd-network fs-1 text-acento mb-3 d-block"></i>
+                                <h5>El primer servidor web</h5>
+                                <p class="text-secondary mb-0">Fue creado por Tim Berners-Lee en 1990 en una computadora
+                                    NeXT. Tenía una nota pegada que decía: "Esta máquina es un servidor. ¡NO LA
+                                    APAGUES!".</p>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <i class="bi bi-robot fs-1 text-warning mb-3 d-block"></i>
+                                <h5>Tráfico de APIs</h5>
+                                <p class="text-secondary mb-0">Se estima que más del 80% del tráfico actual en internet
+                                    es generado directamente por comunicaciones automáticas entre APIs, no por humanos
+                                    navegando.</p>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <i class="bi bi-play-btn fs-1 text-success mb-3 d-block"></i>
+                                <h5>El poder de la Nube</h5>
+                                <p class="text-secondary mb-0">Plataformas como Netflix utilizan 100% arquitectura de
+                                    microservicios alojada en la nube (AWS) para entregar miles de horas de video por
+                                    segundo sin saturarse.</p>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselTexto"
+                            data-bs-slide="prev" style="width: 10%; opacity: 1;">
+                            <i class="bi bi-chevron-left fs-1 text-white"></i>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselTexto"
+                            data-bs-slide="next" style="width: 10%; opacity: 1;">
+                            <i class="bi bi-chevron-right fs-1 text-white"></i>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN: MAPA DE UBICACIÓN -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="mapa" class="seccion-tema py-5">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-3">
+                <i class="bi bi-geo-alt"></i> Ubicación Relacionada
+            </h2>
+            <p class="text-center subtitulo-tema mx-auto mb-5">
+                Silicon Valley, California — Centro mundial de innovación tecnológica donde nacieron
+                empresas como Google, Apple y Meta, líderes en el desarrollo de Web APIs y servicios en la nube.
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="ratio ratio-16x9 rounded overflow-hidden contenedor-mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202895.62504550285!2d-122.19801964838498!3d37.3631225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2smx!4v1709500000000!5m2!1ses!2smx"
+                            allowfullscreen="" loading="lazy" title="Mapa de Silicon Valley"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SECCIÓN: FORMULARIO DE CONTACTO -->
+    <!-- Componente Bootstrap #5: Modal -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="contacto" class="seccion-tema seccion-alterna py-5">
+        <div class="container">
+            <h2 class="titulo-seccion text-center mb-5">
+                <i class="bi bi-envelope"></i> Contacto
+            </h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <form id="formularioContacto" novalidate>
+                        <!-- Campo 1: Nombre -->
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo *</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre completo"
+                                required>
+                            <div class="invalid-feedback" id="errorNombre">Por favor ingresa tu nombre.</div>
+                        </div>
+                        <!-- Campo 2: Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com"
+                                required>
+                            <div class="invalid-feedback" id="errorEmail">Ingresa un correo electrónico válido.</div>
+                        </div>
+                        <!-- Campo 3: Teléfono -->
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono *</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="10 dígitos" required>
+                            <div class="invalid-feedback" id="errorTelefono">Ingresa un teléfono válido (10 dígitos).
+                            </div>
+                        </div>
+                        <!-- Campo 4: Asunto (select) -->
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto *</label>
+                            <select class="form-select" id="asunto" required>
+                                <option value="">Selecciona un tema</option>
+                                <option value="webapis">Web APIs</option>
+                                <option value="microservicios">Microservicios</option>
+                                <option value="contenedores">Contenedores</option>
+                                <option value="nube">Computación en la Nube</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <div class="invalid-feedback" id="errorAsunto">Selecciona un asunto.</div>
+                        </div>
+                        <!-- Campo 5: Mensaje -->
+                        <div class="mb-4">
+                            <label for="mensaje" class="form-label">Mensaje *</label>
+                            <textarea class="form-control" id="mensaje" rows="4"
+                                placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            <div class="invalid-feedback" id="errorMensaje">El mensaje debe tener al menos 10
+                                caracteres.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 boton-enviar">
+                            <i class="bi bi-send me-2"></i> Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="tituloModal">
+                        <i class="bi bi-check-circle text-success"></i> ¡Mensaje Enviado!
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.</p>
+                    <p class="text-secondary mb-0"><small>Gracias por tu interés en estos temas de desarrollo
+                            web.</small></p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ═══════════════════════════════════════ -->
+    <footer class="pie-pagina py-4">
+        <div class="container text-center">
+            <p class="mb-1">
+                <i class="bi bi-code-slash"></i> <strong>DevServer</strong> — Programación del Lado del Servidor
+            </p>
+            <p class="text-secondary mb-0">
+                Desarrollo Web | 6° Semestre — Licenciatura en Informática y Tecnologías Computacionales &copy; 2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script de validación -->
+    <script src="js/validacion.js"></script>
+</body>
+
+</html>
