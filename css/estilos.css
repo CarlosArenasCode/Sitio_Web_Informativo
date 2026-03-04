@@ -1,4 +1,4 @@
-/* --- Variables de colores (Minimalista Monocromático) --- */
+/* --- Variables de colores */
 :root {
     --color-fondo: #050505;
     /* Negro profundo */
@@ -16,7 +16,7 @@
     /* Bordes sutiles */
 }
 
-/* --- Override de colores Bootstrap para Minimalismo --- */
+/* --- Override de colores Bootstrap --- */
 .text-primary,
 .text-success,
 .text-warning,
@@ -105,7 +105,6 @@ h6 {
     background-color: var(--color-fondo);
     padding-top: 80px;
     background-image: none !important;
-    /* Quitar cualquier gradiente */
 }
 
 .etiqueta-hero {
@@ -198,6 +197,11 @@ h6 {
     border-radius: 2px !important;
 }
 
+.imagen-pegajosa {
+    position: sticky;
+    top: 100px;
+}
+
 /* --- Tarjetas (Cards) --- */
 .tarjeta-tema {
     background-color: transparent !important;
@@ -217,7 +221,7 @@ h6 {
     border-radius: 2px 2px 0 0;
 }
 
-/* --- Accordion minimalista --- */
+/* --- Accordion --- */
 .accordion-item {
     background-color: transparent !important;
     border: none;
@@ -275,7 +279,6 @@ h6 {
     border: 1px solid var(--color-borde);
     border-radius: 2px !important;
     padding: 4px;
-    /* Marco sutil */
 }
 
 /* --- Formulario --- */
@@ -334,7 +337,7 @@ h6 {
     font-size: 0.85rem;
 }
 
-/* --- Animaciones (Simples) --- */
+/* --- Animaciones --- */
 .seccion-tema {
     animation: fade 1.5s ease-out;
 }

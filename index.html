@@ -71,11 +71,11 @@
             <h2 class="titulo-seccion text-center mb-5">
                 <i class="bi bi-hdd-network"></i> Tecnologías de Web APIs
             </h2>
-            <div class="row align-items-center g-4">
+            <div class="row align-items-start g-5">
                 <!-- Imagen -->
                 <div class="col-lg-5">
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop"
-                        alt="Código de programación" class="img-fluid rounded-3 imagen-tema">
+                        alt="Código de programación" class="img-fluid rounded-3 imagen-tema imagen-pegajosa">
                 </div>
                 <!-- Acordeón con subtemas -->
                 <div class="col-lg-7">
@@ -94,10 +94,17 @@
                             </h3>
                             <div id="rest" class="accordion-collapse collapse show" data-bs-parent="#acordeonAPIs">
                                 <div class="accordion-body">
-                                    Es el estilo arquitectónico más popular. Utiliza los métodos HTTP (GET, POST, PUT,
-                                    DELETE)
-                                    para operar sobre recursos identificados por URLs. Es simple, escalable y sin estado
-                                    (stateless).
+                                    <p>Es el estilo arquitectónico más popular y estandarizado en la web actual. Se basa
+                                        en principios clave donde cada entidad es un recurso accesible mediante una URL
+                                        única.</p>
+                                    <p>Utiliza los métodos HTTP estándar (<strong>GET</strong> para leer,
+                                        <strong>POST</strong> para crear, <strong>PUT/PATCH</strong> para actualizar, y
+                                        <strong>DELETE</strong> para eliminar). Su principal fortaleza es ser
+                                        <em>stateless</em> (sin estado), lo que significa que cada petición del cliente
+                                        contiene toda la información necesaria para ser procesada, mejorando la
+                                        escalabilidad del servidor. Generalmente intercambia datos en formato
+                                        <strong>JSON</strong> debido a su ligereza y facilidad de lectura.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -110,9 +117,17 @@
                             </h3>
                             <div id="soap" class="accordion-collapse collapse" data-bs-parent="#acordeonAPIs">
                                 <div class="accordion-body">
-                                    Protocolo basado en XML para intercambiar información. Se usa en sistemas
-                                    empresariales
-                                    que requieren alta seguridad y transacciones complejas, como servicios bancarios.
+                                    <p>A diferencia de REST (que es un estilo arquitectónico), SOAP es un
+                                        <strong>protocolo</strong> estricto basado en reglas definidas. Utiliza
+                                        exclusivamente <strong>XML</strong> para el formateo de sus mensajes, los cuales
+                                        constan de una estructura de "Sobre" (Envelope), "Cabecera" (Header) y "Cuerpo"
+                                        (Body).
+                                    </p>
+                                    <p>Es ampliamente adoptado en sistemas empresariales heredados, instituciones
+                                        bancarias y telecomunicaciones porque ofrece estándares integrados de alta
+                                        seguridad (WS-Security) y fiabilidad transaccional (ACID) que garantizan la
+                                        entrega del mensaje, a costa de ser más verboso y consumir más ancho de banda.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -125,9 +140,14 @@
                             </h3>
                             <div id="graphql" class="accordion-collapse collapse" data-bs-parent="#acordeonAPIs">
                                 <div class="accordion-body">
-                                    Lenguaje de consulta creado por Facebook. Permite al cliente solicitar exactamente
-                                    los datos
-                                    que necesita, evitando problemas de over-fetching y under-fetching comunes en REST.
+                                    <p>Es un avanzado lenguaje de consulta para APIs creado por Facebook. Resuelve dos
+                                        grandes problemas de REST: el <em>over-fetching</em> (descargar datos
+                                        excedentes) y el <em>under-fetching</em> (requerir múltiples peticiones para un
+                                        conjunto de datos en concreto).</p>
+                                    <p>A través de un <strong>único endpoint</strong>, el cliente envía una consulta
+                                        precisando la estructura justa a pedir. Además de consultas de lectura
+                                        (Queries), soporta modificaciones (Mutations) y datos en tiempo real
+                                        (Subscriptions).</p>
                                 </div>
                             </div>
                         </div>
@@ -140,9 +160,71 @@
                             </h3>
                             <div id="websockets" class="accordion-collapse collapse" data-bs-parent="#acordeonAPIs">
                                 <div class="accordion-body">
-                                    Protocolo de comunicación bidireccional en tiempo real. Ideal para chats, juegos en
-                                    línea
-                                    y dashboards que necesitan actualizaciones instantáneas sin necesidad de polling.
+                                    <p>Es un protocolo de comunicación avanzado que establece un canal bidireccional,
+                                        persistente y en tiempo real entre el cliente y el servidor a través de una
+                                        única conexión TCP.</p>
+                                    <p>A diferencia de HTTP, WebSockets permite al servidor "empujar" (push) datos sin
+                                        necesidad de que el cliente realice solicitudes iterativas (polling). Es
+                                        indispensable para plataformas en vivo, streaming, redes sociales de mensajería
+                                        al instante y software colaborativo en línea.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#http">
+                                    <i class="bi bi-globe2 me-2"></i> HTTP (Hypertext Transfer Protocol)
+                                </button>
+                            </h3>
+                            <div id="http" class="accordion-collapse collapse" data-bs-parent="#acordeonAPIs">
+                                <div class="accordion-body">
+                                    <p>Es el protocolo base de comunicación de la World Wide Web. Define la semántica y
+                                        el formato de los mensajes mediante los cuales los clientes (navegadores o
+                                        aplicaciones) solicitan recursos y los servidores responden.</p>
+                                    <p>Funciona a través de un modelo cliente-servidor estructurado en peticiones y
+                                        respuestas, utilizando métodos estandarizados (GET, POST, PUT, DELETE) y códigos
+                                        de estado (200, 404, 500) para indicar el resultado de cada transacción.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#restful">
+                                    <i class="bi bi-gear-wide-connected me-2"></i> Interfaces RESTful
+                                </button>
+                            </h3>
+                            <div id="restful" class="accordion-collapse collapse" data-bs-parent="#acordeonAPIs">
+                                <div class="accordion-body">
+                                    <p>Mientras que REST es el paradigma arquitectónico, <strong>RESTful</strong> se
+                                        refiere a los servicios y aplicaciones web que implementan rigurosamente dichos
+                                        principios en la práctica.</p>
+                                    <p>Una API RESTful verdadera utiliza correctamente la semántica de HTTP, maneja el
+                                        estado a través de representaciones (como JSON) y, en su nivel de madurez más
+                                        alto, implementa HATEOAS (Hypermedia as the Engine of Application State) para
+                                        que el cliente pueda navegar dinámicamente por la API a través de hipervínculos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#jwt">
+                                    <i class="bi bi-shield-lock me-2"></i> JWT (JSON Web Token)
+                                </button>
+                            </h3>
+                            <div id="jwt" class="accordion-collapse collapse" data-bs-parent="#acordeonAPIs">
+                                <div class="accordion-body">
+                                    <p>Es un estándar abierto de la industria diseñado para la transmisión segura y
+                                        compacta de información entre partes en formato de objeto JSON, garantizando la
+                                        autenticidad e integridad de dichos datos.</p>
+                                    <p>Es la piedra angular de la autenticación moderna en aplicaciones web y móviles.
+                                        Al iniciar sesión, el servidor firma y emite un token criptográfico inmutable
+                                        que el cliente almacena (típicamente en localStorage) para adjuntarlo en la
+                                        cabecera (Header de Autorización) de todas sus subsecuentes peticiones a rutas
+                                        protegidas.</p>
                                 </div>
                             </div>
                         </div>
@@ -171,11 +253,34 @@
                         <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop"
                             class="card-img-top" alt="Centro de datos">
                         <div class="card-body">
-                            <h5 class="card-title"><i class="bi bi-question-circle text-primary"></i> ¿Qué son?</h5>
-                            <p class="card-text">
-                                Son servicios pequeños que se ejecutan de forma independiente y se comunican
-                                mediante APIs. A diferencia de los monolitos, cada servicio se puede actualizar
-                                y escalar sin afectar a los demás.
+                            <h5 class="card-title"><i class="bi bi-question-circle text-primary"></i> ¿Qué son y qué
+                                hacen?</h5>
+                            <p class="card-text small">
+                                En la arquitectura de microservicios, una aplicación compleja se descompone en pequeñas
+                                unidades independientes. Cada componente hace y es responsable de una única
+                                <strong>capacidad
+                                    de negocio</strong> (ej. facturación e inventario por separado).<br><br>
+                                A diferencia del patrón monolítico tradicional donde todo el código está acoplado, los
+                                microservicios mantienen y protegen
+                                su propia lógica y base de datos de manera hermética.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-tema">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop"
+                            class="card-img-top" alt="Engranajes de lógica">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-diagram-2 text-info"></i> ¿Cómo se comunican?</h5>
+                            <p class="card-text small">
+                                La comunicación es el corazón del sistema. En lugar de llamarse mutuamente en código
+                                fuente, se comunican a través del internet usando red:<br><br>
+                                <strong>Síncrona:</strong> Mediante peticiones directas HTTP/REST o túneles de alta
+                                velocidad como gRPC donde se requiere respuesta inmediata.<br>
+                                <strong>Asíncrona:</strong> Usando colas de mensajería o bus de eventos (event-driven
+                                architecture) como RabbitMQ o Kafka, lo que permite que el emisor envíe el aviso y siga
+                                trabajando sin esperar confirmación.
                             </p>
                         </div>
                     </div>
@@ -185,12 +290,55 @@
                         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop"
                             class="card-img-top" alt="Red global">
                         <div class="card-body">
-                            <h5 class="card-title"><i class="bi bi-check-circle text-success"></i> Ventajas</h5>
-                            <p class="card-text">
-                                <strong>Escalabilidad:</strong> escalar solo lo necesario.<br>
-                                <strong>Independencia:</strong> equipos trabajan en paralelo.<br>
-                                <strong>Resiliencia:</strong> un fallo no afecta el sistema completo.<br>
-                                <strong>Flexibilidad tecnológica:</strong> cada servicio puede usar su propio stack.
+                            <h5 class="card-title"><i class="bi bi-check-circle text-success"></i> ¿Cómo se organizan?
+                            </h5>
+                            <p class="card-text small border-start border-success border-2 ps-2">
+                                <strong>Gestión Descentralizada:</strong> Cada diminuto servicio es dueño de sus datos.
+                                No existe una super-base de datos general.<br>
+                                <strong>Equipos Autónomos (Políglotas):</strong> Un departamento ("two-pizza team")
+                                programa un módulo en Node.js, y otro elige Python simultáneamente en el mismo
+                                ecosistema.<br>
+                                <strong>Agilidad Integración Continua (CI/CD):</strong> Se automatizan pipelines para
+                                organizar lanzamientos múltiples diarios sin afectar el servidor hermano.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-tema">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=250&fit=crop"
+                            class="card-img-top" alt="Escalabilidad infinita">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-hand-thumbs-up text-primary"></i> Ventajas Lógicas y
+                                Funcionales</h5>
+                            <p class="card-text small">
+                                <strong>Escalabilidad granular:</strong> Si solo el servicio de procesamiento de pagos
+                                tiene mucha
+                                demanda (ej. Black Friday), el sistema replica (clona) automáticamente ese servicio sin
+                                clonar el resto de la app.<br><br>
+                                <strong>Resiliencia Segregada:</strong> Si el sistema de notificaciones por email sufre
+                                un error crítico, falla sólo esa caja fuerte; la aplicación principal y las compras web
+                                seguirán marchando intactas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-tema">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=250&fit=crop"
+                            class="card-img-top" alt="Reunión tecnológica empresarial">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-calendar-check text-warning"></i> ¿Cuándo
+                                utilizarlos?</h5>
+                            <p class="card-text small border-start border-warning border-2 ps-2">
+                                <strong>SÍ utilizarlos cuando:</strong>
+                                Tienes una aplicación de altísima envergadura comercial, cuentas con docenas de
+                                ingenieros divididos en áreas, y precisas de despliegues (updates) ininterrumpidos y
+                                alta disponibilidad mundial 24/7 (ej. plataformas de Streaming y Bancos).<br><br>
+                                <strong>NO utilizarlos cuando:</strong>
+                                Es una Startup temprana o proyecto universitario sin financiamiento que prioriza validar
+                                la idea velozmente; aquí el Monolito tradicional siempre será tu aliado menos costoso de
+                                diseñar y reparar.
                             </p>
                         </div>
                     </div>
@@ -200,17 +348,22 @@
                         <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop"
                             class="card-img-top" alt="Desarrollo de software">
                         <div class="card-body">
-                            <h5 class="card-title"><i class="bi bi-tools text-warning"></i> Herramientas</h5>
+                            <h5 class="card-title"><i class="bi bi-tools text-danger"></i> Herramientas Esenciales</h5>
+                            <p class="card-text small mb-2">Las que dominan la industria y se han vuelto innegociables
+                                para orquestar la compleja red:</p>
                             <p class="card-text">
-                                <span class="badge bg-secondary">Docker</span>
-                                <span class="badge bg-secondary">Kubernetes</span>
-                                <span class="badge bg-secondary">API Gateway</span>
-                                <span class="badge bg-secondary">RabbitMQ</span>
-                                <span class="badge bg-secondary">gRPC</span>
-                                <span class="badge bg-secondary">Consul</span>
-                                <br><br>
-                                Estas herramientas facilitan la comunicación, el despliegue y la
-                                orquestación de microservicios en producción.
+                                <span class="badge bg-secondary mb-1">Docker</span> <small>(Empaquetado
+                                    inmutable)</small><br>
+                                <span class="badge bg-secondary mb-1">Kubernetes / K8s</span> <small>(Orquestación,
+                                    balanceo de red y sanación)</small><br>
+                                <span class="badge bg-secondary mb-1">API Gateway</span> <small>(Enrutador de puerta
+                                    único de Internet)</small><br>
+                                <span class="badge bg-secondary mb-1">Apache Kafka</span> <small>(Streaming y bus
+                                    inmenso de mensajes)</small><br>
+                                <span class="badge bg-secondary mb-1">gRPC</span> <small>(RPC en comunicaciones rápidas
+                                    internas)</small><br>
+                                <span class="badge bg-secondary mb-1">Prometheus & Grafana</span> <small>(Trazabilidad y
+                                    telemetría visual)</small>
                             </p>
                         </div>
                     </div>
@@ -227,60 +380,156 @@
             <h2 class="titulo-seccion text-center mb-5">
                 <i class="bi bi-braces"></i> Desarrollo de una Web API
             </h2>
-            <div class="row align-items-center g-4">
-                <div class="col-lg-7">
-                    <p>
-                        Desarrollar una Web API implica crear endpoints que reciben peticiones HTTP y devuelven
-                        datos en formatos como <strong>JSON</strong> o <strong>XML</strong>. Los frameworks modernos
-                        simplifican este proceso al proporcionar herramientas para rutas, middleware y manejo de
-                        errores.
-                    </p>
-                    <h5 class="mt-4 mb-3">Métodos HTTP principales:</h5>
-                    <div class="table-responsive">
-                        <table class="table table-dark table-bordered tabla-metodos">
-                            <thead>
-                                <tr>
-                                    <th>Método</th>
-                                    <th>Acción</th>
-                                    <th>Ejemplo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="badge bg-success">GET</span></td>
-                                    <td>Obtener datos</td>
-                                    <td>/api/usuarios</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="badge bg-primary">POST</span></td>
-                                    <td>Crear recurso</td>
-                                    <td>/api/usuarios</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="badge bg-warning text-dark">PUT</span></td>
-                                    <td>Actualizar recurso</td>
-                                    <td>/api/usuarios/1</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="badge bg-danger">DELETE</span></td>
-                                    <td>Eliminar recurso</td>
-                                    <td>/api/usuarios/1</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <h5 class="mt-4 mb-3">Frameworks populares:</h5>
-                    <p>
-                        <span class="badge bg-success">Express.js</span>
-                        <span class="badge bg-info">Flask</span>
-                        <span class="badge bg-danger">Spring Boot</span>
-                        <span class="badge bg-warning text-dark">Django REST</span>
-                        <span class="badge bg-primary">ASP.NET</span>
-                    </p>
-                </div>
+            <div class="row g-5">
+                <!-- Columna Izquierda: Imagen y Recomendaciones -->
                 <div class="col-lg-5">
                     <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&h=400&fit=crop"
-                        alt="Desarrollo de API" class="img-fluid rounded-3 imagen-tema">
+                        alt="Desarrollo de API" class="img-fluid rounded-3 imagen-tema mb-4">
+
+                    <div class="tarjeta-tema h-100 p-4 rounded-3" style="border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 class="text-acento mb-4"><i class="bi bi-star me-2"></i> 3.1. Recomendaciones</h4>
+                        <ol class="list-group list-group-numbered list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent text-secondary border-secondary pt-0 px-0">
+                                <strong>Definir los objetivos de la API.</strong> Antes de comenzar a desarrollar la
+                                API, es fundamental tener una comprensión clara de los problemas que intentará resolver
+                                y los usuarios a los que servirá.
+                            </li>
+                            <li class="list-group-item bg-transparent text-secondary border-secondary px-0">
+                                <strong>Seguir estándares y convenciones.</strong> Es importante seguir los estándares y
+                                convenciones de la industria al desarrollar una API web. Esto facilita la comprensión y
+                                el uso de la API por parte de otros desarrolladores, por ejemplo seguir los principios
+                                de REST, utilizar JSON o XML como formatos de intercambio de datos, etc.
+                            </li>
+                            <li class="list-group-item bg-transparent text-secondary border-secondary px-0">
+                                <strong>Documentar la API de manera exhaustiva.</strong> La documentación clara y
+                                completa de la API es esencial para que otros desarrolladores puedan entender cómo
+                                usarla correctamente, se pueden utilizar herramientas como Swagger o Postman para
+                                generar documentación automáticamente.
+                            </li>
+                            <li class="list-group-item bg-transparent text-secondary border-secondary px-0">
+                                <strong>Priorizar la seguridad.</strong> La seguridad es un aspecto crucial en el
+                                desarrollo de las APIs web, se deben implementar medidas de seguridad como autenticación
+                                y autorización para proteger la API de accesos no autorizados.
+                            </li>
+                            <li
+                                class="list-group-item bg-transparent text-secondary border-bottom-0 border-secondary pb-0 px-0">
+                                <strong>Versionar la API.</strong> A medida que la API evoluciona, es importante
+                                mantener la compatibilidad hacia atrás, versionar la API permite introducir cambios sin
+                                afectar a los usuarios existentes.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Proceso de desarrollo -->
+                <div class="col-lg-7">
+                    <h4 class="text-info mb-4"><i class="bi bi-list-check me-2"></i> 3.2. Proceso de desarrollo de una
+                        Web API</h4>
+                    <div class="accordion" id="acordeonProcesoApi">
+
+                        <!-- Paso 1 y 2 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#paso1y2">
+                                    Fase Inicial: Análisis y Planificación
+                                </button>
+                            </h3>
+                            <div id="paso1y2" class="accordion-collapse collapse show"
+                                data-bs-parent="#acordeonProcesoApi">
+                                <div class="accordion-body">
+                                    <p><strong>1. Análisis de requerimientos.</strong> Identificar los requisitos
+                                        funcionales y no funcionales de la API, incluidos los casos de uso y los datos
+                                        que se manipularán.</p>
+                                    <p class="mb-0"><strong>2. Planificación:</strong> Una vez que se han definido los
+                                        requerimientos, se pasa a la planificación del proyecto, que incluye la
+                                        definición de los objetivos del proyecto, la asignación de recursos, la
+                                        estimación de tiempos y costos, y la definición de la metodología de desarrollo
+                                        a utilizar. La planificación se basa en los requerimientos identificados.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paso 3 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#paso3">
+                                    3. Diseño de la API (Endpoints)
+                                </button>
+                            </h3>
+                            <div id="paso3" class="accordion-collapse collapse" data-bs-parent="#acordeonProcesoApi">
+                                <div class="accordion-body">
+                                    <p>Definir los endpoints, métodos HTTP admitidos, parámetros de solicitud y
+                                        respuesta, y esquema de autenticación. Un endpoint en el contexto de una API web
+                                        es una URL específica a la que los clientes pueden enviar solicitudes HTTP para
+                                        interactuar con la API, cada endpoint está asociado con una operación específica
+                                        que la API puede realizar, como obtener información, enviar datos o eliminar
+                                        recursos.</p>
+                                    <p>Por ejemplo, en una API de un blog, los endpoints podrían ser:</p>
+                                    <ul class="text-secondary small">
+                                        <li><code>/posts</code>: Para obtener una lista de todos los posts o crear un
+                                            nuevo post.</li>
+                                        <li><code>/posts/{id}</code>: Para obtener, actualizar o eliminar un post
+                                            específico identificado por su ID.</li>
+                                        <li><code>/comments</code>: Para obtener una lista de todos los comentarios o
+                                            crear un nuevo comentario.</li>
+                                        <li><code>/comments/{id}</code>: Para obtener, actualizar o eliminar un
+                                            comentario específico identificado por su ID.</li>
+                                    </ul>
+                                    <p class="mb-0">Cada endpoint suele estar asociado con un método HTTP específico,
+                                        como GET, POST, PUT o DELETE, que indica la acción que se desea realizar en el
+                                        recurso correspondiente.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paso 4, 5 y 6 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#paso456">
+                                    Fase de Ejecución: Implementación, Pruebas y Documentación
+                                </button>
+                            </h3>
+                            <div id="paso456" class="accordion-collapse collapse" data-bs-parent="#acordeonProcesoApi">
+                                <div class="accordion-body">
+                                    <p><strong>4. Implementación.</strong> Al desarrollar una API se debe seguir un
+                                        diseño definido, utilizando herramientas y frameworks adecuados como por ejemplo
+                                        Express.js para Node.js o Flask para Python.</p>
+                                    <p><strong>5. Pruebas.</strong> Realizar pruebas unitarias y de integración para
+                                        garantizar que la API funcione según lo esperado y que maneje adecuadamente los
+                                        errores.</p>
+                                    <p class="mb-0"><strong>6. Documentación.</strong> Crear documentación clara y
+                                        detallada de la API, incluidos ejemplos de uso y casos de error.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paso 7, 8 y 9 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#paso789">
+                                    Fase Final: Despliegue, Monitoreo y Comercialización
+                                </button>
+                            </h3>
+                            <div id="paso789" class="accordion-collapse collapse" data-bs-parent="#acordeonProcesoApi">
+                                <div class="accordion-body">
+                                    <p><strong>7. Despliegue.</strong> Implementar la API en un entorno de producción,
+                                        asegurando que esté disponible y escalable.</p>
+                                    <p><strong>8. Monitoreo y mantenimiento.</strong> Establecer un sistema de monitoreo
+                                        para detectar problemas y realizar mantenimiento regular para garantizar que la
+                                        API siga siendo eficiente y segura.</p>
+                                    <p class="mb-0"><strong>9. Comercialización (opcional).</strong> Al desarrollar APIs
+                                        que serán ofertadas al público o las empresas, entonces será conveniente
+                                        publicar la API para monetizarla en algún mercado de APIs en donde los
+                                        desarrolladores compran y vendan.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -294,34 +543,51 @@
             <h2 class="titulo-seccion text-center mb-5">
                 <i class="bi bi-box-seam"></i> Manejo de Contenedores
             </h2>
-            <div class="row align-items-center g-4">
+            <div class="row align-items-start g-5">
                 <div class="col-lg-5">
                     <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600&h=400&fit=crop"
-                        alt="Contenedores Docker" class="img-fluid rounded-3 imagen-tema">
+                        alt="Contenedores Docker" class="img-fluid rounded-3 imagen-tema imagen-pegajosa">
                 </div>
                 <div class="col-lg-7">
                     <p>
-                        Los <strong>contenedores</strong> son unidades de software que empaquetan el código junto con
-                        todas sus dependencias, garantizando que la aplicación funcione de forma idéntica en cualquier
-                        entorno, ya sea desarrollo, pruebas o producción.
+                        Los <strong>contenedores</strong> resolvieron y sepultaron el eterno problema entre
+                        desarrolladores corporativos en oficina: <em>"Es que en mi máquina local sí funcionaba
+                            bien"</em>. Como unidades inmutables, estandarizadas y aisladas lógicamente, empaquetan la
+                        lógica del programa en conjunto de librerías esenciales, binarios y configuraciones propias.
+                        Como comparten el mismo kernel o espacio de trabajo abstracto con la computadora host a nivel de
+                        sistema operativo abierto, levantan la instancia maestra en pocos milisegundos a diferencia de
+                        pesadas y antiguas máquinas virtuales informáticas completas.
                     </p>
-                    <h5 class="mt-4 mb-3"><i class="bi bi-box text-info"></i> Docker</h5>
-                    <p>
-                        Es la plataforma líder para crear y ejecutar contenedores. Utiliza un
-                        <strong>Dockerfile</strong>
-                        para definir la imagen y <strong>Docker Compose</strong> para orquestar múltiples contenedores.
+                    <h5 class="mt-4 mb-2"><i class="bi bi-box text-info"></i> Docker (Motor de Contenedores)</h5>
+                    <p class="small mb-3">
+                        Herramienta número uno a nivel mundial laboral. Inician por un archivo programable y descriptivo
+                        llamado <strong>Dockerfile</strong> que compila de manera estática y paso a paso tu interfaz en
+                        una imagen portátil imborrable. Si el departamento de ingeniería necesita levantar de raíz tu
+                        aplicación en la nube backend NodeJS y una base de datos de MongoDB separada de golpe en la red
+                        paralela, utilizas <strong>Docker Compose</strong> el cual te abstrae la orquestación dura para
+                        interconectarlos eficazmente mediante túneles aislados cerrados.
                     </p>
-                    <h5 class="mt-3 mb-3"><i class="bi bi-gear text-info"></i> Kubernetes (K8s)</h5>
-                    <p>
-                        Sistema de orquestación que automatiza el despliegue, escalado y gestión de contenedores
-                        en clústeres de servidores. Es el estándar de la industria para aplicaciones a gran escala.
+                    <h5 class="mt-3 mb-2"><i class="bi bi-gear text-info"></i> Kubernetes / K8s (Director Logístico)
+                    </h5>
+                    <p class="small mb-3">
+                        Cuando un sistema internacional tecnológico es muy masivo y consta de cientos de ligeros
+                        contenedores fragmentados individualmente y trabajando asincrónamente en partes iguales a lo
+                        largo de diversos racks o servidores físicos del globo general, necesitas un ente automatizado
+                        supremo de gestión. Estándar universal originalmente financiado por el centro tecnológico
+                        principal de Google Cloud Systems para manejar los balanceos a gran escala, asignar
+                        eficientemente RAM e iniciar auto-sanaciones (encontrar microservicios contenedores congelados o
+                        fatalmente dañados temporalmente en el instante para reemplazarlos con reinicios automáticos
+                        inmediatamente sin que el cliente note ninguna caída ni lentitud grave del host).
                     </p>
-                    <h5 class="mt-3 mb-3"><i class="bi bi-check2-all text-info"></i> Beneficios clave</h5>
-                    <ul>
-                        <li>Portabilidad: funciona igual en cualquier máquina</li>
-                        <li>Aislamiento: cada contenedor es independiente</li>
-                        <li>Eficiencia: más ligeros que las máquinas virtuales</li>
-                        <li>Escalabilidad: fácil de replicar servicios</li>
+                    <h5 class="mt-3 mb-2"><i class="bi bi-check2-all text-info"></i> Impacto en la Industria DevOps
+                        Integral</h5>
+                    <ul class="small mb-0">
+                        <li><strong>Empaquetamiento Inmutable:</strong> Cumple y facilita procesos lógicos formales
+                            hacia producciones en red mundial.</li>
+                        <li><strong>Eficiencia en Densidad Operativa:</strong> Alojas más aplicaciones pesadas sin
+                            acaparar memoria del rack base originario en el hardware.</li>
+                        <li><strong>Failsafes de Seguridad Inmediata:</strong> El reanudar sistemas o versiones
+                            previamente testeadas cuesta ahora menos clics logísticos.</li>
                     </ul>
                 </div>
             </div>
@@ -346,12 +612,17 @@
                         <div class="card-body">
                             <i class="bi bi-hdd-rack icono-nube text-primary"></i>
                             <h5 class="card-title mt-3">IaaS</h5>
-                            <p class="card-text">
-                                <strong>Infraestructura como Servicio.</strong> Provee servidores virtuales,
-                                redes y almacenamiento. El usuario gestiona el sistema operativo y las aplicaciones.
+                            <p class="card-text small text-start">
+                                <strong>Infraestructura como Servicio:</strong> Proporciona bloques brutos elementales
+                                (Hardware, Memoria virtual, Procesador CPU, Sistemas de archivos y Redes perimetrales
+                                avanzadas). Tienes rango y acceso administrativo para configurar llaves, subredes
+                                perimetrales y puertas lógicas. Por dicho motivo corporativo superior el desarrollador o
+                                equipo operativo principal encarna todo el trabajo continuo en arreglar fallas o parches
+                                del SO como Ubuntu y manejar de lleno las bases de datos primarias.
                             </p>
-                            <span class="badge bg-primary">AWS EC2</span>
-                            <span class="badge bg-primary">Azure VMs</span>
+                            <span class="badge bg-primary">AWS EC2 Instances</span>
+                            <span class="badge bg-primary">GCP Compute Engine</span>
+                            <span class="badge bg-primary">Azure VMs Central</span>
                         </div>
                     </div>
                 </div>
@@ -360,12 +631,17 @@
                         <div class="card-body">
                             <i class="bi bi-layers icono-nube text-success"></i>
                             <h5 class="card-title mt-3">PaaS</h5>
-                            <p class="card-text">
-                                <strong>Plataforma como Servicio.</strong> Ofrece un entorno listo para desarrollar
-                                y desplegar apps sin preocuparse por la infraestructura subyacente.
+                            <p class="card-text small text-start">
+                                <strong>Plataforma como Servicio:</strong> Son servicios que extraen los detalles crudos
+                                y se orientan plenamente pensando en la agilidad de los ingenieros al estructurar
+                                aplicaciones o sitios web. El cliente u operario cero de nivel únicamente subraya o
+                                envía subidas de archivos git hacia las tuberías host de este plano sin instalar
+                                frameworks lógicos, y este inteligente entorno asimila internamente las redes
+                                construyendo dominios públicos al instante para no truncar la etapa o diseño backend.
                             </p>
-                            <span class="badge bg-success">Heroku</span>
-                            <span class="badge bg-success">Google App Engine</span>
+                            <span class="badge bg-success">Heroku Cloud App</span>
+                            <span class="badge bg-success">Vercel Platform Edge</span>
+                            <span class="badge bg-success">DigitalOcean Apps</span>
                         </div>
                     </div>
                 </div>
@@ -374,12 +650,17 @@
                         <div class="card-body">
                             <i class="bi bi-globe icono-nube text-warning"></i>
                             <h5 class="card-title mt-3">SaaS</h5>
-                            <p class="card-text">
-                                <strong>Software como Servicio.</strong> Aplicaciones completas accesibles desde el
-                                navegador. El proveedor gestiona toda la infraestructura y mantenimiento.
+                            <p class="card-text small text-start">
+                                <strong>Software en la Nube de Consumo:</strong> Toda clase de programa y plataforma
+                                remota o producto general ya mercantilizado listo de inicio, que funciona usualmente
+                                pagando pases mensuales renovables accesibles desde tu smartphone y ordenador personal
+                                básico local. Los dueños mantienen toda la gigantesca matriz global en absoluta
+                                confidencia, desde el núcleo logístico a todas las interfaces diarias del propio usuario
+                                doméstico, empresarial u ocasional.
                             </p>
-                            <span class="badge bg-warning text-dark">Gmail</span>
-                            <span class="badge bg-warning text-dark">Slack</span>
+                            <span class="badge bg-warning text-dark">Workspace Suites</span>
+                            <span class="badge bg-warning text-dark">Salesforce Analytics</span>
+                            <span class="badge bg-warning text-dark">Netflix TV / Spotify</span>
                         </div>
                     </div>
                 </div>
