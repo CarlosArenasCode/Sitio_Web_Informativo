@@ -205,7 +205,7 @@ h6 {
 .video-seccion {
     border: 1px solid var(--color-borde);
     background-color: var(--color-tarjeta);
-    max-width: 860px;
+    max-width: 760px;
     margin: 0 auto;
 }
 
