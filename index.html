@@ -38,6 +38,12 @@
                     <li class="nav-item"><a class="nav-link" href="#contenedores">Contenedores</a></li>
                     <li class="nav-item"><a class="nav-link" href="#nube">Nube</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <!-- Botón Modal Agregar -->
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalAcercaDe">
+                            <i class="bi bi-info-circle me-1"></i> Acerca de
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -975,6 +981,34 @@
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal "Acerca de" -->
+    <div class="modal fade" id="modalAcercaDe" tabindex="-1" aria-labelledby="tituloModalAcercaDe" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border border-secondary">
+                <div class="modal-header border-0 border-bottom border-secondary">
+                    <h5 class="modal-title text-acento" id="tituloModalAcercaDe">
+                        <i class="bi bi-info-circle-fill me-2"></i> Acerca de este sitio
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este sitio web ha sido diseñado como material educativo para explorar los fundamentos del
+                        desarrollo backend y la programación del lado del servidor.</p>
+                    <p class="mb-0"><strong>Tecnologías utilizadas:</strong></p>
+                    <ul class="text-secondary small mt-2">
+                        <li>HTML5 y CSS3 nativo</li>
+                        <li>Bootstrap 5.3 (Componentes, Grid, Utilitarios)</li>
+                        <li>Iconos de Bootstrap (Bootstrap Icons)</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0 border-top border-secondary">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar ventana</button>
                 </div>
             </div>
         </div>
